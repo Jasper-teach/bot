@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+
+  /* Discord-like dark theme colors */
+  --discord-dark: hsl(220, 13%, 13%);
+  --discord-darker: hsl(223, 13%, 18%);
+  --discord-gray: hsl(225, 9%, 22%);
+  --discord-light: hsl(225, 8%, 26%);
+  --discord-text: hsl(220, 8%, 86%);
+  --discord-muted: hsl(218, 7%, 73%);
+  --discord-blue: hsl(235, 86%, 65%);
+  --discord-blue-dark: hsl(235, 77%, 58%);
+  --discord-green: hsl(139, 47%, 43%);
+  --discord-yellow: hsl(38, 96%, 54%);
+}
+
+.dark {
+  --background: hsl(220, 13%, 13%);
+  --foreground: hsl(220, 8%, 86%);
+  --muted: hsl(225, 9%, 22%);
+  --muted-foreground: hsl(218, 7%, 73%);
+  --popover: hsl(223, 13%, 18%);
+  --popover-foreground: hsl(220, 8%, 86%);
+  --card: hsl(223, 13%, 18%);
+  --card-foreground: hsl(220, 8%, 86%);
+  --border: hsl(225, 9%, 22%);
+  --input: hsl(225, 8%, 26%);
+  --primary: hsl(235, 86%, 65%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(225, 9%, 22%);
+  --secondary-foreground: hsl(220, 8%, 86%);
+  --accent: hsl(225, 9%, 22%);
+  --accent-foreground: hsl(220, 8%, 86%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--discord-dark);
+    color: var(--discord-text);
+  }
+}
+
+/* Custom Discord-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--discord-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--discord-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--discord-gray);
+}
